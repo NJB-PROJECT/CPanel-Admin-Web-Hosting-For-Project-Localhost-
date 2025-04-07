@@ -1,0 +1,98 @@
+/* ssl.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #0f172a;
+    color: #f1f5f9;
+  }
+  
+  .ssl-panel {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 2rem;
+    background: #1e293b;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+    animation: fadeIn 0.7s ease-in-out;
+  }
+  
+  .ssl-panel h1, .ssl-panel h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #38bdf8;
+  }
+  
+  button {
+    background-color: #0ea5e9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0369a1;
+  }
+  
+  .upload-form {
+    background: #334155;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: slideDown 0.4s ease;
+  }
+  
+  .upload-form label {
+    font-weight: bold;
+  }
+  
+  .upload-form input[type="text"],
+  .upload-form input[type="file"] {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #475569;
+    background-color: #1e293b;
+    color: white;
+  }
+  
+  .ssl-table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+  }
+  
+  .ssl-table th, .ssl-table td {
+    padding: 12px;
+    border: 1px solid #475569;
+    text-align: center;
+  }
+  
+  .ssl-table th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+  }
+  
+  .ssl-table td {
+    background-color: #1e293b;
+    color: #cbd5e1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideDown {
+    from { opacity: 0; transform: scaleY(0); }
+    to { opacity: 1; transform: scaleY(1); }
+  }
+  
