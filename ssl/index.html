@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSL Certificates Panel</title>
+  <link rel="stylesheet" href="ssl.css" />
+</head>
+<body>
+  <div class="ssl-panel">
+    <h1>SSL Certificates Management</h1>
+    <button id="uploadBtn">+ Upload SSL Certificate</button>
+
+    <div class="upload-form hidden" id="uploadForm">
+      <h2>Upload SSL Certificate for Domain</h2>
+      <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <label>Domain:</label>
+        <input type="text" name="domain" required />
+
+        <label>Certificate (.crt):</label>
+        <input type="file" name="crt_file" accept=".crt" required />
+
+        <label>Private Key (.key):</label>
+        <input type="file" name="key_file" accept=".key" required />
+
+        <label>CA Bundle (Optional):</label>
+        <input type="file" name="ca_file" accept=".crt,.pem" />
+
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+
+    <table class="ssl-table">
+      <thead>
+        <tr>
+          <th>Domain</th>
+          <th>Status</th>
+          <th>Expiry Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="sslList">
+        <!-- Data akan dimuat lewat JS dari ssl_data.json -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.getElementById("uploadBtn").onclick = () => {
+      document.getElementById("uploadForm").classList.toggle("hidden");
+    };
+
+    fetch("list_ssl.php")
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.getElementById("sslList");
+        data.forEach(entry => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${entry.domain}</td>
+            <td>${entry.status}</td>
+            <td>${entry.expiry}</td>
+            <td>
+              <button>Ganti</button>
+              <button>Hapus</button>
+            </td>`;
+          tbody.appendChild(row);
+        });
+      });
+  </script>
+</body>
+</html>
