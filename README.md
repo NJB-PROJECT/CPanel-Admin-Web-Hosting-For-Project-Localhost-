@@ -20,6 +20,10 @@ Dashboard CPanel Hostings Included Freature :
 7. Users & Roles
 8. Activity Logs
 
+The freature i need to make :
+1. Email bot/automation (like massage client to warn they if SSL Cert will be expired)
+>> next plan freature on march 13th 2025! <<
+
 all freature still in development, and maybe next years this project will be shut off because i'm will be crazy for make this project for one dev.
 
 Contect me : 
