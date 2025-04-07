@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Control Panel</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Web Management</li>
+            <li>SSL Certificates</li>
+            <li>Database</li>
+            <li>FTP & Files</li>
+            <li>DNS & Domains</li>
+            <li>Monitoring</li>
+            <li>Users & Roles</li>
+            <li>Activity Logs</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Dashboard Overview</h1>
+        </header>
+
+        <section class="stats">
+            <div class="card">
+                <h3>CPU Usage</h3>
+                <canvas id="cpuChart"></canvas>
+            </div>
+            <div class="card">
+                <h3>RAM Usage</h3>
+                <canvas id="ramChart"></canvas>
+            </div>
+            <div class="card">
+                <h3>Disk Usage</h3>
+                <canvas id="diskChart"></canvas>
+            </div>
+        </section>
+
+        <!-- ✅ Tambahan Monitoring Status -->
+        <section class="stats">
+            <div class="card" id="cpu">Loading CPU...</div>
+            <div class="card" id="ram">Loading RAM...</div>
+            <div class="card" id="disk">Loading Disk...</div>
+            <div class="card" id="apache">Loading Apache...</div>
+            <div class="card" id="mysql">Loading MySQL...</div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
