@@ -23,9 +23,10 @@ Dashboard CPanel Hostings Included Feature :
 The feature i need to make :
 1. Email bot/automation (like massage client to warn they if SSL Cert will be expired)
 2. Early Access ChatGPT or Copilot on CPanel Admin (you can ask anything with them if you need fast response help.)
-> next plan feature on 20th March 2025! <<
+
+> This plan i will stop for now, because i need take a rest! <<
 
 all feature still in development, and maybe next years this project will be shut off because i'm will be crazy for make this project for one dev.
 
 Contect me : 
-Insta : Muhammad Najib Ramadhan (Opelatia_lil_mirandania)
+Insta : Muhammad Najib Ramadhan
